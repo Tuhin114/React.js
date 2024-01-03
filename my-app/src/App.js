@@ -1,22 +1,10 @@
-import "./App.css";
-
-let name = "React-App";
-let className = "App-header";
+import Video from "./components/Video";
 
 function App() {
   return (
-    <div className="App">
-      <div className={className}>
-        {name}
-        <Demo></Demo>
-      </div>
-    </div>
-  );
-}
-function Demo() {
-  return (
-    <div className="App">
-      <div className="App-header">Demo</div>
+    <div>
+      <div>Hello</div>
+      <Video></Video>
     </div>
   );
 }
