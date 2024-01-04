@@ -4,7 +4,8 @@ function App() {
   return (
     <div>
       <div>Hello</div>
-      <Video></Video>
+      <Video bgColor="red" title="React JS tutorial"></Video>
+      <Video bgColor="green" title="Node JS tutorial"></Video>
     </div>
   );
 }

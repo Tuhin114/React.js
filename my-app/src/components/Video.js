@@ -1,12 +1,14 @@
 import "./Video.css";
 
-function Video() {
+function Video({ title, bgColor }) {
   let bg = "dark";
-  let name = "Katherine Johnson";
+
   return (
     <>
-      <img src="https://i.imgur.com/MK3eW3Am.jpg" alt="Katherine Johnson" />
-      <div className={bg}>{name}</div>
+      <img src="https://dummyimage.com/600x300/000/fff" alt="React.js" />
+      <div className={bg} style={{ backgroundColor: bgColor }}>
+        {title}
+      </div>
     </>
   );
 }
