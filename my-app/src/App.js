@@ -1,11 +1,22 @@
 import Video from "./components/Video";
+import "./App.css";
 
 function App() {
   return (
-    <div>
+    <div className="App">
       <div>Hello</div>
-      <Video bgColor="red" title="React JS tutorial"></Video>
-      <Video bgColor="green" title="Node JS tutorial"></Video>
+      <Video
+        views="472K"
+        channel="Code With Harry"
+        title="React JS tutorial"
+        time="10 months ago"
+      ></Video>
+      <Video
+        views="400K"
+        channel="Chai aur Code"
+        title="Node JS tutorial"
+        time="1 year ago"
+      ></Video>
     </div>
   );
 }

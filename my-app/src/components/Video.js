@@ -1,13 +1,18 @@
 import "./Video.css";
 
-function Video({ title, bgColor }) {
-  let bg = "dark";
-
+function Video({ title, channel, views, time }) {
   return (
     <>
-      <img src="https://dummyimage.com/600x300/000/fff" alt="React.js" />
-      <div className={bg} style={{ backgroundColor: bgColor }}>
-        {title}
+      <div className="container">
+        <div className="pic">
+          <img src="https://dummyimage.com/600x300/000/fff" alt="React.js" />
+        </div>
+
+        <div className="title">{title}</div>
+        <div className="channel">{channel}</div>
+        <div className="views">
+          {views} views <span>.</span> {time}
+        </div>
       </div>
     </>
   );
