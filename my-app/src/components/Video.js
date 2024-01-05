@@ -1,6 +1,7 @@
 import "./Video.css";
 
-function Video({ title, channel, views, time }) {
+function Video({ title, channel = "Code With Harry", views, time }) {
+  //channel = "Code With Harry" to make default value...if channel name is missing in App.js
   return (
     <>
       <div className="container">
