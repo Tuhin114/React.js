@@ -1,6 +1,7 @@
 import Video from "./components/Video";
 import "./App.css";
 import videos from "./data/data";
+import PlayButton from "./components/PlayButton";
 
 function App() {
   return (
@@ -16,6 +17,9 @@ function App() {
           id={video.id}
         ></Video>
       ))}
+      <div style={{ clear: "both" }}>
+        <PlayButton></PlayButton>
+      </div>
     </div>
   );
 }
