@@ -17,8 +17,9 @@ function App() {
           id={video.id}
         ></Video>
       ))}
-      <div style={{ clear: "both" }}>
-        <PlayButton></PlayButton>
+      <div style={{ clear: "both", display: "flex" }}>
+        <PlayButton message="Play">Play</PlayButton>
+        <PlayButton message="Pause">Pause</PlayButton>
       </div>
     </div>
   );

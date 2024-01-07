@@ -63,14 +63,6 @@ const videos = [
     time: "2.5 years ago",
     verified: false,
   },
-  {
-    id: 9,
-    views: "920K",
-    channel: "The Coding Train",
-    title: "Creative Coding with p5.js",
-    time: "2 years ago",
-    verified: true,
-  },
 ];
 
 export default videos;
