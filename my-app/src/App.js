@@ -20,19 +20,14 @@ function App() {
       <div style={{ clear: "both", display: "flex" }}>
         <PlayButton
           message="Play"
-          onClick={() => {
-            console.log("OnClick");
+          onPlay={() => {
+            console.log("Play");
+          }}
+          onPause={() => {
+            console.log("Pause");
           }}
         >
           Play
-        </PlayButton>
-        <PlayButton
-          message="Pause"
-          onClick={() => {
-            alert("Alert");
-          }}
-        >
-          Pause
         </PlayButton>
       </div>
     </div>
