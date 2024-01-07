@@ -18,8 +18,22 @@ function App() {
         ></Video>
       ))}
       <div style={{ clear: "both", display: "flex" }}>
-        <PlayButton message="Play">Play</PlayButton>
-        <PlayButton message="Pause">Pause</PlayButton>
+        <PlayButton
+          message="Play"
+          onClick={() => {
+            console.log("OnClick");
+          }}
+        >
+          Play
+        </PlayButton>
+        <PlayButton
+          message="Pause"
+          onClick={() => {
+            alert("Alert");
+          }}
+        >
+          Pause
+        </PlayButton>
       </div>
     </div>
   );
