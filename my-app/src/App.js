@@ -15,10 +15,22 @@ function App() {
           title={video.title}
           time={video.time}
           id={video.id}
-        ></Video>
+        >
+          <PlayButton
+            message="Play"
+            onPlay={() => {
+              console.log("Playing...", video.title);
+            }}
+            onPause={() => {
+              console.log("Paused...", video.title);
+            }}
+          >
+            {video.title}
+          </PlayButton>
+        </Video>
       ))}
       <div style={{ clear: "both", display: "flex" }}>
-        <PlayButton
+        {/* <PlayButton
           message="Play"
           onPlay={() => {
             console.log("Play");
@@ -28,7 +40,7 @@ function App() {
           }}
         >
           Play
-        </PlayButton>
+        </PlayButton> */}
       </div>
     </div>
   );

@@ -7,6 +7,7 @@ function Video({
   views,
   time,
   verified,
+  children,
 }) {
   //channel = "Code With Harry" to make default value...if channel name is missing in App.js
 
@@ -25,6 +26,7 @@ function Video({
         <div className="views">
           {views} views <span>•</span> {time}
         </div>
+        <div>{children}</div>
       </div>
     </>
   );
