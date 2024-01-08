@@ -5,7 +5,12 @@ import PlayButton from "./components/PlayButton";
 
 function App() {
   return (
-    <div className="App">
+    <div
+      className="App"
+      onClick={() => {
+        console.log("App");
+      }}
+    >
       <div className="title">Video</div>
       {videos.map((video) => (
         <Video
