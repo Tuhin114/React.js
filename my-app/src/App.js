@@ -1,10 +1,12 @@
 import Video from "./components/Video";
 import "./App.css";
-import videos from "./data/data";
+import videoDB from "./data/data";
 import PlayButton from "./components/PlayButton";
 import Counter from "./components/Counter";
+import { useState } from "react";
 
 function App() {
+  const [videos, setVideos] = useState(videoDB);
   return (
     <div
       className="App"
