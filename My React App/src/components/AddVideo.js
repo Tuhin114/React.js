@@ -8,7 +8,10 @@ const AddVideo = () => {
     time: "10 months ago",
     verified: true,
   });
-  function handleSubmit() {}
+  function handleSubmit(e) {
+    e.preventDefault();
+    console.log(video);
+  }
   function handleChange(e) {
     console.log(e.target.name, e.target.value);
     setVideo({ ...video, [e.target.name]: e.target.value });
@@ -28,17 +31,7 @@ const AddVideo = () => {
         onChange={handleChange}
         placeholder="views"
       />
-      <button
-        onClick={handleSubmit}
-        // onClick={() => {
-        // setVideos([
-        //   ...videos,
-
-        // ]);
-        // }}
-      >
-        Add Video
-      </button>
+      <button onClick={handleSubmit}>Add Video</button>
     </form>
   );
 };
