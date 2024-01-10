@@ -1,10 +1,18 @@
-import { React } from "react";
+import { React, useState } from "react";
 import "./AddVideo.css";
 
 const AddVideo = () => {
+  const [video, setVideo] = useState({
+    channel: "Code With Harry",
+    title: "React JS tutorial",
+    time: "10 months ago",
+    verified: true,
+  });
   function handleSubmit() {}
   function handleChange(e) {
     console.log(e.target.name, e.target.value);
+    setVideo({ ...video, [e.target.name]: e.target.value });
+    console.log(video);
   }
   return (
     <form>
@@ -25,14 +33,7 @@ const AddVideo = () => {
         // onClick={() => {
         // setVideos([
         //   ...videos,
-        //   {
-        //     id: videos.length + 1,
-        //     views: "472K",
-        //     channel: "Code With Harry",
-        //     title: "React JS tutorial",
-        //     time: "10 months ago",
-        //     verified: true,
-        //   },
+
         // ]);
         // }}
       >
