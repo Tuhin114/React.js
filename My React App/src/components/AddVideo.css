@@ -1,0 +1,7 @@
+input {
+  display: block;
+  margin-bottom: 0.32rem;
+  padding: 5px;
+  border: 3px solid rgb(170, 167, 167);
+  border-radius: 7px;
+}
