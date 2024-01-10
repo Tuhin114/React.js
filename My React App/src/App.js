@@ -14,7 +14,25 @@ function App() {
         console.log("App");
       }}
     >
-      <div className="title">Video</div>
+      <div>
+        <button
+          onClick={() => {
+            setVideos([
+              ...videos,
+              {
+                id: videos.length + 1,
+                views: "472K",
+                channel: "Code With Harry",
+                title: "React JS tutorial",
+                time: "10 months ago",
+                verified: true,
+              },
+            ]);
+          }}
+        >
+          Add Video
+        </button>
+      </div>
       {videos.map((video) => (
         <Video
           key={video.id}
