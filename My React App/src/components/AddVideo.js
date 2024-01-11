@@ -10,7 +10,7 @@ const AddVideo = (addVideos) => {
   });
   function handleSubmit(e) {
     e.preventDefault();
-    addVideos();
+    addVideos(video);
     console.log(video);
   }
   function handleChange(e) {

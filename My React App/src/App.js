@@ -8,9 +8,13 @@ import AddVideo from "./components/AddVideo";
 
 function App() {
   const [videos, setVideos] = useState(videoDB);
+
+  function AddVideos(video) {
+    setVideos([...videos, { ...video, id: videos.length + 1 }]);
+  }
   return (
     <div className="App" onClick={() => {}}>
-      <AddVideo addVideos={setVideos}></AddVideo>
+      <AddVideo addVideos={AddVideos}></AddVideo>
       {videos.map((video) => (
         <Video
           key={video.id}
