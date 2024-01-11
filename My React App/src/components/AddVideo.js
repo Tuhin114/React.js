@@ -1,7 +1,7 @@
 import { React, useState } from "react";
 import "./AddVideo.css";
 
-const AddVideo = () => {
+const AddVideo = (addVideos) => {
   const [video, setVideo] = useState({
     channel: "Code With Harry",
     title: "React JS tutorial",
@@ -10,6 +10,7 @@ const AddVideo = () => {
   });
   function handleSubmit(e) {
     e.preventDefault();
+    addVideos();
     console.log(video);
   }
   function handleChange(e) {

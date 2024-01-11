@@ -10,7 +10,7 @@ function App() {
   const [videos, setVideos] = useState(videoDB);
   return (
     <div className="App" onClick={() => {}}>
-      <AddVideo />
+      <AddVideo addVideos={setVideos}></AddVideo>
       {videos.map((video) => (
         <Video
           key={video.id}
