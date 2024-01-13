@@ -7,7 +7,9 @@ const Interests = ({ interests }) => {
       <div className="stuff">
         <p className="head">Interests</p>
         <ul>
-          <li>{interests}</li>
+          {interests.map((interest, index) => (
+            <li key={index}>{interest}</li>
+          ))}
         </ul>
       </div>
     </>

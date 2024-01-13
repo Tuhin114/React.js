@@ -7,7 +7,9 @@ const Experience = ({ experience }) => {
       <div className="stuff">
         <p className="head">Experience</p>
         <ul>
-          <li>{experience}</li>
+          {experience.map((experience, index) => (
+            <li key={index}>{experience}</li>
+          ))}
         </ul>
       </div>
     </>

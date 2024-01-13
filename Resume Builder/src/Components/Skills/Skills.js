@@ -7,7 +7,9 @@ const Skills = ({ skills }) => {
       <div className="stuff">
         <p className="head">Skills</p>
         <ul>
-          <li>{skills}</li>
+          {skills.map((skills, index) => (
+            <li key={index}>{skills}</li>
+          ))}
         </ul>
       </div>
     </>

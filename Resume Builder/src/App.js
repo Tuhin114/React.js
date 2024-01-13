@@ -11,11 +11,17 @@ import Footer from "./Components/Footer";
 const App = () => {
   let data = {
     title: "Tuhin Poddar",
-    interests: "Drawing",
-    skills: "Web Design with HTML & CSS",
-    education: "Wilton High School",
-    experience: "Student Technology Intern for Wilton School District",
-    extracurriculars: "Recycling Club",
+    interests: [
+      "Competitive Programming",
+      "AI/ML",
+      "3D Modeling",
+      "Datascience",
+      "Web Development",
+    ],
+    skills: ["Frontend", "Backend", "DataBases"],
+    education: ["MAKAUT", "Sodepur High School"],
+    experience: ["Hacktoberfest"],
+    extracurriculars: ["YouTube", "Gamming", "Reading"],
   };
   return (
     <div>

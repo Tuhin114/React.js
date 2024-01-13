@@ -7,7 +7,9 @@ const Extracurriculars = ({ extracurriculars }) => {
       <div className="stuff">
         <p className="head">Extracurriculars</p>
         <ul>
-          <li>{extracurriculars}</li>
+          {extracurriculars.map((extracurriculars, index) => (
+            <li key={index}>{extracurriculars}</li>
+          ))}
         </ul>
       </div>
     </>
