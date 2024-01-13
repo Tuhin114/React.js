@@ -29,11 +29,13 @@ const App = () => {
       <div className="left"></div>
       <div>
         <Heading {...data}></Heading>
-        <Interests {...data}></Interests>
-        <Skills {...data}></Skills>
-        <Education {...data}></Education>
-        <Experience {...data}></Experience>
-        <Extracurriculars {...data}></Extracurriculars>
+        {data.interests.length > 0 && <Interests {...data}></Interests>}
+        {data.skills.length > 0 && <Skills {...data}></Skills>}
+        {data.education.length > 0 && <Education {...data}></Education>}
+        {data.experience.length > 0 && <Experience {...data}></Experience>}
+        {data.extracurriculars.length > 0 && (
+          <Extracurriculars {...data}></Extracurriculars>
+        )}
       </div>
       <div className="right"></div>
       <Footer></Footer>
