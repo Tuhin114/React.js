@@ -1,15 +1,13 @@
 import React from "react";
 import "../../App.css";
 
-const Extracurriculars = () => {
+const Extracurriculars = ({ extracurriculars }) => {
   return (
     <>
       <div className="stuff">
         <p className="head">Extracurriculars</p>
         <ul>
-          <li>Recycling Club</li>
-          <li>Gardening Club</li>
-          <li>Book Club</li>
+          <li>{extracurriculars}</li>
         </ul>
       </div>
     </>

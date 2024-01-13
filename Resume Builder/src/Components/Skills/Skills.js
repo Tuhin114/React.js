@@ -1,13 +1,13 @@
 import React from "react";
 import "../../App.css";
 
-const Skills = () => {
+const Skills = ({ skills }) => {
   return (
     <>
       <div className="stuff">
         <p className="head">Skills</p>
         <ul>
-          <li>Web Design with HTML & CSS</li>
+          <li>{skills}</li>
         </ul>
       </div>
     </>
