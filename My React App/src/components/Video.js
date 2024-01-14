@@ -8,12 +8,16 @@ function Video({
   time,
   verified,
   children,
+  deleteVideo,
 }) {
   //channel = "Code With Harry" to make default value...if channel name is missing in App.js
 
   return (
     <>
       <div className="container">
+        <button className="close" onClick={() => deleteVideo(id)}>
+          X
+        </button>
         <div className="pic">
           <img src={`https://picsum.photos/id/${id}/250/150`} alt="React.js" />
         </div>
