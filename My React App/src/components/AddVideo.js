@@ -1,24 +1,33 @@
-import { React, useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./AddVideo.css";
 
-const initialVideos = {
+const initialVideoState = {
   channel: "Code With Harry",
   time: "10 months ago",
   verified: true,
-  title: "",
-  views: "",
+  title: " ",
+  views: " ",
 };
 
-const AddVideo = ({ addVideos }) => {
-  const [video, setVideo] = useState({ initialVideos });
+const AddVideo = ({ addVideos, editableVideo }) => {
+  const [video, setVideo] = useState(initialVideoState);
+
   function handleSubmit(e) {
     e.preventDefault();
     addVideos(video);
-    setVideo(initialVideos);
+    setVideo(initialVideoState);
   }
+
   function handleChange(e) {
     setVideo({ ...video, [e.target.name]: e.target.value });
   }
+
+  useEffect(() => {
+    if (editableVideo) {
+      setVideo(editableVideo);
+    }
+  }, [editableVideo]);
+
   return (
     <form>
       <input
