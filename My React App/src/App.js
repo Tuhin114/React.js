@@ -22,7 +22,7 @@ function App() {
   }
   return (
     <div className="App" onClick={() => {}}>
-      <AddVideo addVideos={AddVideos} editableVideo={editVideo}></AddVideo>
+      <AddVideo addVideos={AddVideos} editableVideo={editableVideo}></AddVideo>
       <VideoList
         deleteVideo={deleteVideo}
         editVideo={editVideo}
