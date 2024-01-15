@@ -9,12 +9,17 @@ const initialVideoState = {
   views: " ",
 };
 
-const AddVideo = ({ addVideos, editableVideo }) => {
+const AddVideo = ({ addVideos, updateVideo, editableVideo }) => {
   const [video, setVideo] = useState(initialVideoState);
 
   function handleSubmit(e) {
     e.preventDefault();
-    addVideos(video);
+    if (editableVideo) {
+      updateVideo(video);
+    } else {
+      addVideos(video);
+    }
+
     setVideo(initialVideoState);
   }
 
@@ -44,7 +49,9 @@ const AddVideo = ({ addVideos, editableVideo }) => {
         placeholder="views"
         value={video.views}
       />
-      <button onClick={handleSubmit}>Add Video</button>
+      <button onClick={handleSubmit}>
+        {editableVideo ? "Edit" : "Add"} Video
+      </button>
     </form>
   );
 };
