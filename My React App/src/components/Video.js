@@ -8,7 +8,7 @@ function Video({
   time,
   verified,
   children,
-  deleteVideo,
+  dispatch,
   editVideo,
 }) {
   //channel = "Code With Harry" to make default value...if channel name is missing in App.js
@@ -16,7 +16,10 @@ function Video({
   return (
     <>
       <div className="container">
-        <button className="close" onClick={() => deleteVideo(id)}>
+        <button
+          className="close"
+          onClick={() => dispatch({ type: "DELETE", payload: id })}
+        >
           X
         </button>
         <button className="edit" onClick={() => editVideo(id)}>

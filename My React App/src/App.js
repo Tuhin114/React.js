@@ -29,35 +29,31 @@ function App() {
   const [videos, dispatch] = useReducer(videoReducer, videoDB);
   // const [videos, setVideos] = useState(videoDB);
 
-  function AddVideos(video) {
-    dispatch({ type: "ADD", payload: video }); //action:{type:'ADD', payload:'video'}
-    // setVideos([...videos, { ...video, id: videos.length + 1 }]);
-  }
-  function deleteVideo(id) {
-    dispatch({ type: "DELETE", payload: id });
-    // setVideos(videos.filter((video) => video.id !== id));
-  }
+  // function AddVideos(video) {
+  //   dispatch({ type: "ADD", payload: video }); //action:{type:'ADD', payload:'video'}
+  //   // setVideos([...videos, { ...video, id: videos.length + 1 }]);
+  // }
+  // function deleteVideo(id) {
+  //   dispatch({ type: "DELETE", payload: id });
+  //   // setVideos(videos.filter((video) => video.id !== id));
+  // }
   function editVideo(id) {
     setEditableVideo(videos.find((video) => video.id === id));
   }
 
-  function updateVideo(video) {
-    // const index = videos.findIndex((v) => v.id === video.id);
-    // const updatedVideos = [...videos];
-    // updatedVideos.splice(index, 1, video);
-    dispatch({ type: "UPDATE", payload: video });
-    // setVideos(updatedVideos);
-  }
+  // function updateVideo(video) {
+  //   // const index = videos.findIndex((v) => v.id === video.id);
+  //   // const updatedVideos = [...videos];
+  //   // updatedVideos.splice(index, 1, video);
+  //   dispatch({ type: "UPDATE", payload: video });
+  //   // setVideos(updatedVideos);
+  // }
 
   return (
     <div className="App" onClick={() => {}}>
-      <AddVideo
-        addVideos={AddVideos}
-        updateVideo={updateVideo}
-        editableVideo={editableVideo}
-      ></AddVideo>
+      <AddVideo dispatch={dispatch} editableVideo={editableVideo}></AddVideo>
       <VideoList
-        deleteVideo={deleteVideo}
+        dispatch={dispatch}
         editVideo={editVideo}
         videos={videos}
       ></VideoList>

@@ -2,7 +2,7 @@ import React from "react";
 import PlayButton from "./PlayButton";
 import Video from "./Video";
 
-const VideoList = ({ videos, deleteVideo, editVideo }) => {
+const VideoList = ({ videos, dispatch, editVideo }) => {
   return (
     <div>
       {videos.map((video) => (
@@ -13,8 +13,8 @@ const VideoList = ({ videos, deleteVideo, editVideo }) => {
           title={video.title}
           time={video.time}
           id={video.id}
-          deleteVideo={deleteVideo}
           editVideo={editVideo}
+          dispatch={dispatch}
         >
           <PlayButton
             message="Play"
