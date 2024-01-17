@@ -3,11 +3,24 @@ button {
   border: 1px solid yellow;
   padding: 1em;
   border-radius: 1em;
-  color: white;
   cursor: pointer;
 }
 
 button:hover {
   background-color: rgb(138, 133, 133);
+  color: rgb(123, 121, 121);
+}
+
+button.darkMode,
+.darkMode button {
+  background-color: black;
+  border: 1px solid yellow;
   color: white;
+}
+
+button.lightMode,
+.lightMode button {
+  background-color: rgb(118, 114, 114);
+  border: 1px solid rgb(45, 45, 44);
+  color: black;
 }

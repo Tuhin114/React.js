@@ -6,9 +6,11 @@ import videoDB from "./data/data";
 import { useReducer, useState } from "react";
 import AddVideo from "./components/AddVideo";
 import VideoList from "./components/VideoList";
+import ThemeContext from "./components/context/ThemeContext";
 
 function App() {
   const [editableVideo, setEditableVideo] = useState(null);
+  const [mode, setMode] = useState("darkMode");
   function videoReducer(videos, action) {
     switch (action.type) {
       case "ADD":
@@ -27,7 +29,7 @@ function App() {
   }
 
   const [videos, dispatch] = useReducer(videoReducer, videoDB);
-  // const [videos, setVideos] = useState(videoDB);
+  // const [videos, setVideos] = useState(videoDB) ;
 
   // function AddVideos(video) {
   //   dispatch({ type: "ADD", payload: video }); //action:{type:'ADD', payload:'video'}
@@ -50,14 +52,23 @@ function App() {
   // }
 
   return (
-    <div className="App" onClick={() => {}}>
-      <AddVideo dispatch={dispatch} editableVideo={editableVideo}></AddVideo>
-      <VideoList
-        dispatch={dispatch}
-        editVideo={editVideo}
-        videos={videos}
-      ></VideoList>
-    </div>
+    <ThemeContext.Provider value={mode}>
+      <div className={`App ${mode}`} onClick={() => {}}>
+        <button
+          onClick={() => {
+            setMode(mode === "darkMode" ? "lightMode" : "darkMode");
+          }}
+        >
+          Mode
+        </button>
+        <AddVideo dispatch={dispatch} editableVideo={editableVideo}></AddVideo>
+        <VideoList
+          dispatch={dispatch}
+          editVideo={editVideo}
+          videos={videos}
+        ></VideoList>
+      </div>
+    </ThemeContext.Provider>
   );
 }
 

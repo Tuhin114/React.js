@@ -1,4 +1,6 @@
+import { useContext } from "react";
 import "./Video.css";
+import ThemeContext from "./context/ThemeContext";
 
 function Video({
   title,
@@ -11,11 +13,12 @@ function Video({
   dispatch,
   editVideo,
 }) {
+  const theme = useContext(ThemeContext);
   //channel = "Code With Harry" to make default value...if channel name is missing in App.js
 
   return (
     <>
-      <div className="container">
+      <div className={`container ${theme}`}>
         <button
           className="close"
           onClick={() => dispatch({ type: "DELETE", payload: id })}

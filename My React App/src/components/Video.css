@@ -10,6 +10,13 @@
   position: relative;
 }
 
+.container.darkMode {
+  color: white;
+}
+.container.lightMode {
+  color: black;
+}
+
 .pic img {
   width: 100%;
 }
@@ -17,7 +24,6 @@
 .title {
   font-weight: bold;
   margin-bottom: 0.4em;
-  color: rgb(235, 229, 229);
 }
 
 .channel,
