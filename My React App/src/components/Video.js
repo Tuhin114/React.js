@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import "./Video.css";
 import ThemeContext from "./context/ThemeContext";
+import VideoDispatchContext from "./context/VideoDispatchContext";
 
 function Video({
   title,
@@ -10,11 +11,11 @@ function Video({
   time,
   verified,
   children,
-  dispatch,
+
   editVideo,
 }) {
   const theme = useContext(ThemeContext);
-  //channel = "Code With Harry" to make default value...if channel name is missing in App.js
+  const dispatch = useContext(VideoDispatchContext);
 
   return (
     <>
