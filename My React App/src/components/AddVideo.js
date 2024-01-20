@@ -1,6 +1,6 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect } from "react";
 import "./AddVideo.css";
-import VideoDispatchContext from "./context/VideoDispatchContext";
+import useVideoDispatch from "./hooks/VideoDispatch";
 
 const initialVideoState = {
   channel: "Code With Harry",
@@ -12,7 +12,7 @@ const initialVideoState = {
 
 const AddVideo = ({ editableVideo }) => {
   const [video, setVideo] = useState(initialVideoState);
-  const dispatch = useContext(VideoDispatchContext);
+  const dispatch = useVideoDispatch();
 
   function handleSubmit(e) {
     e.preventDefault();
