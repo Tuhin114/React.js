@@ -11,7 +11,6 @@ function Video({
   time,
   verified,
   children,
-
   editVideo,
 }) {
   const theme = useContext(ThemeContext);

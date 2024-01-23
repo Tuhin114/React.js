@@ -1,4 +1,5 @@
-import VideosContext from "../components/context/VideosContext";
+import VideosContext from "../context/VideosContext";
+
 const { useContext } = require("react");
 
 function useVideo() {
