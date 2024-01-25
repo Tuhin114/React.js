@@ -34,14 +34,7 @@ const AddVideo = ({ editableVideo }) => {
     if (editableVideo) {
       setVideo(editableVideo);
     }
-    // inputRef.current.placeholder = "";
     inputRef.current.focus();
-    // "type here".split("").forEach((char, i) => {
-    //   setTimeout(() => {
-    //     inputRef.current.placeholder = inputRef.current.placeholder + char;
-    //   }, 200 * i);
-    // });
-    //Basically it is showing a text animation but due to some error it is not showing anything...
   }, [editableVideo]);
 
   return (
