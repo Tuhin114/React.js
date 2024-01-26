@@ -1,9 +1,9 @@
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, memo } from "react";
 import "./Video.css";
 import ThemeContext from "./context/ThemeContext";
 import useVideoDispatch from "./hooks/VideoDispatch";
 
-function Video({
+const Video = memo(function Video({
   title,
   id,
   channel = "Code With Harry",
@@ -19,7 +19,7 @@ function Video({
   useEffect(() => {
     const idx = setInterval(() => {
       //SetInterval returns an id
-      console.log("Video Playing", id);
+      // console.log("Video Playing", id);
       // console.log(idx);
     }, 3000);
     return () => {
@@ -55,6 +55,6 @@ function Video({
       </div>
     </>
   );
-}
+});
 
 export default Video;

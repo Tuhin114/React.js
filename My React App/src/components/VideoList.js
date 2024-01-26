@@ -1,10 +1,20 @@
-import React from "react";
+import React, { useCallback, useMemo } from "react";
 import PlayButton from "./PlayButton";
 import Video from "./Video";
 import useVideo from "./hooks/Video";
 
 const VideoList = ({ editVideo }) => {
   const videos = useVideo();
+  const play = useCallback(() => console.log("Playing..."), []);
+  const pause = useCallback(() => console.log("Paused..."), []);
+  const memoButton = useMemo(
+    () => (
+      <PlayButton message="Play" onPlay={play} onPause={pause}>
+        Play
+      </PlayButton>
+    ),
+    [pause, play]
+  );
   return (
     <div>
       {videos.map((video) => (
@@ -17,17 +27,7 @@ const VideoList = ({ editVideo }) => {
           id={video.id}
           editVideo={editVideo}
         >
-          <PlayButton
-            message="Play"
-            onPlay={() => {
-              console.log("Playing...", video.title);
-            }}
-            onPause={() => {
-              console.log("Paused...", video.title);
-            }}
-          >
-            {video.title}
-          </PlayButton>
+          {memoButton}
         </Video>
       ))}
     </div>
