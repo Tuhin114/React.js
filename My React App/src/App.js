@@ -1,7 +1,7 @@
 import "./App.css";
 import videoDB from "./data/data";
 import { useReducer, useState } from "react";
-// import Counter from "./components/Counter";
+import Counter from "./components/Counter";
 import AddVideo from "./components/AddVideo";
 import VideoList from "./components/VideoList";
 import ThemeContext from "./components/context/ThemeContext";
@@ -39,7 +39,7 @@ function App() {
       <VideosContext.Provider value={videos}>
         <VideoDispatchContext.Provider value={dispatch}>
           <div className={`App ${mode}`} onClick={() => {}}>
-            {/* <Counter></Counter> */}
+            <Counter></Counter>
             <button
               onClick={() => {
                 setMode(mode === "darkMode" ? "lightMode" : "darkMode");
